@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import * as ROUTES from './constants/routes';
+
+const Login = lazy(() => import('./pages/login'));
+
+function App() {
+  return (
+    <Router>
+      <Suspense fallback={<p>loading...</p>}>
+        <Switch>
+          <Route path={ROUTES.LOGIN} component={Login} />
+        </Switch>
+      </Suspense>
+    </Router>
+=======
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,6 +36,7 @@ function App() {
         </a>
       </header>
     </div>
+>>>>>>> main
   );
 }
 
