@@ -2,8 +2,6 @@ import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-import { seedDataBase } from '../seed'
-
 const config = {
   apiKey: "AIzaSyDXfx1pu2CpIZwXguh4RuovpUu3A9dXotU",
   authDomain: "insta-clone-3.firebaseapp.com",
@@ -18,7 +16,6 @@ const { FieldValue } = Firebase.firestore;
 
 console.log(firebase, FieldValue);
 
-seedDataBase(firebase)
 
 export { firebase, FieldValue };
 
