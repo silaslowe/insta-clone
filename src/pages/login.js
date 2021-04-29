@@ -19,7 +19,7 @@ export default function Login() {
 
   return (
     <div className="container flex mx-auto mzx-w-screen-md items-cents h-screen">
-      <p>No idear at all</p>
+      <p>No idear even more</p>
     </div>
   );
 }
