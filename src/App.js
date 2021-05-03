@@ -11,7 +11,7 @@ function App() {
         <Switch>
           <Route path={ROUTES.LOGIN} component={Login} />
         </Switch>
-      </Suspense>
+      </Suspense> 
     </Router>
   );
 }
