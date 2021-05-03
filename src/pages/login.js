@@ -14,7 +14,7 @@ export default function Login() {
   const handleLogin = () => {};
 
   useEffect(() => {
-    document.title = 'Login - INstaclone';
+    document.title = 'Login - Instaclone';
   }, []);
 
   return (

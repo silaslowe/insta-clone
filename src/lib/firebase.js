@@ -3,12 +3,12 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-  apiKey: 'AIzaSyA-8-4ZYpXroP4Jgr-rNkdJ9L5XkxjD6aQ',
-  authDomain: 'insta-clone2-ac1f9.firebaseapp.com',
-  projectId: 'insta-clone2-ac1f9',
-  storageBucket: 'insta-clone2-ac1f9.appspot.com',
-  messagingSenderId: '602608395232',
-  appId: '1:602608395232:web:f3db3340e5cf2ddf4b0185'
+  apiKey: "AIzaSyDXfx1pu2CpIZwXguh4RuovpUu3A9dXotU",
+  authDomain: "insta-clone-3.firebaseapp.com",
+  projectId: "insta-clone-3",
+  storageBucket: "insta-clone-3.appspot.com",
+  messagingSenderId: "519277781591",
+  appId: "1:519277781591:web:04b0c813886ba3683bb912"
 };
 
 const firebase = Firebase.initializeApp(config);
@@ -16,4 +16,7 @@ const { FieldValue } = Firebase.firestore;
 
 console.log(firebase, FieldValue);
 
+
 export { firebase, FieldValue };
+
+
