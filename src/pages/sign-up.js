@@ -19,7 +19,7 @@ export default function SignUp() {
     e.preventDefault();
 
     const userNameExists = await doesUsernameExist(username)
-    if(!userNameExists) {
+    if(!userNameExists.length) {
       try {
         const createdUserResult = await firebase
         .auth()
@@ -32,7 +32,7 @@ export default function SignUp() {
           });
 
           // firebase userc collection (create and document)
-          await firebase.firestore.collection('users').add({
+          await firebase.firestore().collection('users').add({
             userId: createdUserResult.user.uid, 
             username: username.toLowerCase(),
             fullName,
@@ -40,7 +40,6 @@ export default function SignUp() {
             following: [],
             dateCreated: Date.now()
           })
-
           history.push(ROUTES.DASHBOARD)
       } catch(error) {
         setFullName('')
