@@ -29,16 +29,8 @@ export async function getSuggestedProfiles(userId, following) {
   .collection('users')
   .limit(10)
   .get();
-  console.log("RESULT",result)
 
-  return result.docs.map((user) => ({...user.data(), docId: user.id}))
+  return result.docs
+  .map((user) => ({ ...user.data(), docId: user.id}))
   .filter((profile) => profile.userId !== userId && !following.includes(profile.userId))
-  // const [{ following }]
-  // const profiles = result.docs
-  // .map((item) => ({
-  //   ...item.data(),
-  //   docId: item.id
-  // }))
-  // console.log("PROFILES", profiles)
-  // return profiles
 }
