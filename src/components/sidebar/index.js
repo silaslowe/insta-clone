@@ -6,13 +6,15 @@ import User from './user'
 
 export default function Sidebar() {
     const { 
-        user: {fullName, username, userId, following} 
+        user: {docId, fullName, username, userId, following} 
     } = useUser()
+
+    console.log("docId", docId)
 
     console.log("FOLLOWING", following)
        return <div className="p-4">
-           <User username={username} fullName={fullName}/>
-           <Suggestions userId={userId} following={following}/>
+           <User username={username} fullName={fullName} />
+           <Suggestions userId={userId} following={following} loggedInUserDocId={docId}/>
        </div>
 }
 
